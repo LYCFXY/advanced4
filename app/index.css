@@ -1,0 +1,686 @@
+html,body {
+    margin: 0;
+    padding：0；
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*以下是字体的引用*/
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url(https://fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaJ0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(https://fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwZ_TkvowlIOtbR7ePgFOpF4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(https://fonts.gstatic.com/s/droidserif/v6/cj2hUnSRBhwmSPr9kS589-LrC4Du4e_yfTJ8Ol60xk0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url(https://fonts.gstatic.com/s/droidserif/v6/c92rD_x0V1LslSFt3-QEpmsGzsqhEorxQDpu60nfWEc.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IC5FJMZltoAAwO2fP7iHu2o.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v10/IQHow_FEYlDC4Gzy_m8fcvEr6Hm6RMS0v1dtXsGir4g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Slab Thin'), local('RobotoSlab-Thin'), url(https://fonts.gstatic.com/s/robotoslab/v6/MEz38VLIFL-t46JUtkIEgH4UHu-c0cTZKOwO_f6u1Os.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(https://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJbfB31yxOzP-czbf6AAKCVo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zp0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(https://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJZ_TkvowlIOtbR7ePgFOpF4.ttf) format('truetype');
+}
+
+/*以下是header nav部分代码*/
+header {
+ width:100%;
+}
+header nav {
+    background: transparent;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+      z-index:999;
+}
+
+header .container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+header .container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .container a {
+    padding: 15px;
+    font-size: 2em;
+    font-family:"Kaushan Script";
+    float: left;
+}
+header .container ul {
+    float: right;
+}
+header .container ul li {
+    float: left;
+}
+header .container ul li a {
+    padding:15px;
+    font-family: "Montserrat";
+    font-size: 1.2em;
+    display: block;
+    line-height: 2em;
+    color: #ccc;
+}
+header .container ul li a:hover{
+    color: #fed136 ;
+}
+header .container a{
+    color:#fed136;
+    text-decoration: none;
+}
+
+/*以下是header benner部分代码*/
+header .banner {
+  width: 100%;
+ /*  background: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg)
+   no-repeat center center;
+ background-size: cover; */
+  position: relative;
+}
+header .banner .banner-box {
+  width: 100%;
+  padding-top: 15%;
+  padding-bottom: 150px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+header .banner .carousel {
+ width: 1920px;
+ height: 900px;
+ position: relative;
+}
+header .banner .imgBox {
+  position: absolute;
+  width: 400%;
+  font-size: 0;
+  left: 0;
+  top: 0;
+}
+
+header .banner .banner-img:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .banner .imgBox li {
+  float: left;
+  width: 25%;
+}
+header .banner .imgBox li img {
+  width: 100%;
+}
+
+/* 以下是轮播的样式 */
+.carousel .pre-arrow,
+.carousel .next-arrow {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    margin-top: -15px;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0.7;
+    z-index: 999;
+}
+
+.carousel .pre-arrow {
+    left: 20%;
+ }
+ .carousel .next-arrow {
+    right: 20%;
+ }
+
+.carousel .slider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6%;
+    width: 176px;
+}
+
+.carousel .slider li {
+    width: 30px;
+    height: 5px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    float: left;
+    margin: 0 6px;
+}
+
+.active {
+    background:#fff;
+}
+
+
+header .banner .banner-img li img {
+  min-height: 869px
+}
+header .banner .welcome {
+  font-family: "Droid Serif";
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-style: oblique;
+  margin-bottom: 25px;
+  white-space:nowrap;
+}
+header .banner .meet {
+  font-family: "Montserrat";
+  font-size: 75px;
+  color: #fff;
+  margin-bottom: 75px;
+  font-weight: 700;
+  white-space:nowrap;
+}
+header .banner .button-box{
+  padding: 20px 0;
+}
+header .banner .services {
+  text-decoration: none;
+  font-family: "Montserrat";
+  background: #fed136;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 4px;
+}
+
+
+/*以下是section serves部分*/
+/* 曝光加载 */
+#services .container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+#services .container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#services .container li{
+  float: left;
+  margin: 10px 10px;
+}
+#services .container li img{
+  width: 380px;
+  height: 380px;
+}
+#services .container p{
+  float: left;
+}
+
+#services .btn{
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      width: 80px;
+      border: 1px solid #E27272;
+      border-radius: 3px;
+      text-align: center;
+      text-decoration: none;
+      color: #E27272;
+    }
+#services .btn:hover{
+      background: #E27272;
+      color: #fff;
+    }
+
+
+
+
+.wrap{
+  width: 1170px;
+  padding: 150px 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+.same-style h2 {
+  font-size: 40px;
+  font-family: "Montserrat";
+}
+.same-style>p{
+  font-family: "Droid Serif";
+  font-size: 16px;
+  color: #777;
+  font-weight: 400;
+  font-style: oblique;
+  margin: 20px 0 75px;
+}
+.same-style ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.same-style>ul>li {
+  padding-top: 10px;
+  padding: 0 15px;
+}
+.same-style .wrap-main>ul>li {
+  padding-top: 10px;
+  padding: 0 15px;
+}
+#services ul li {
+  float: left;
+  width: 350px;
+}
+#services ul li .shopping-cart {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: #fed136;
+  margin: 0 auto;
+}
+/*http://js.jirengu.com/vijeqecoqu/2/edit*/
+@font-face {
+  font-family: 'cart';  /* project id 367849 */
+  src: url('//at.alicdn.com/t/font_wn7h8x6gvl7bvs4i.eot');
+  src: url('//at.alicdn.com/t/font_wn7h8x6gvl7bvs4i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_wn7h8x6gvl7bvs4i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_wn7h8x6gvl7bvs4i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_wn7h8x6gvl7bvs4i.svg#iconfont') format('svg');
+}
+.cart,
+.icon,
+.wrap-icon li a{
+    font-family:"cart" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+/*思考遂平垂直居中*/
+#services ul li .shopping-cart:before {
+  content: "\e600";
+  margin-top: ;
+  font-size:57px;
+  line-height: 112px;
+}
+
+/*以下是section protfolio部分样式*/
+#portfolio {
+  width: 100%;
+  background: #f7f7f7;
+}
+
+#portfolio ul li {
+  float: left;
+  width: 350px;
+  padding: 0;
+  margin: 0 15px 30px 15px;
+  background: #fff;
+  box-shadow: 0 3px 5px #ccc;
+  position: relative;
+}
+#portfolio ul li img {
+  width: 100%;
+}
+.shade{
+  width: 350px;
+  height: 253px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.shade i{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #fed136;
+  opacity: 0;
+  -webkit-transition: all 1s;
+     -moz-transition: all 1s;
+      -ms-transition: all 1s;
+       -o-transition: all 1s;
+          transition: all 1s;
+}
+
+
+.shade i:after {
+  content: "\e608";
+  display: block;
+  font-size: 50px;
+  line-height: 253px;
+  color: #fff;
+}
+
+.shade:hover i {
+  display: block;
+  opacity: .9;
+}
+
+/*以下是section about部分*/
+#about {
+  width: 100%;
+  background: #fff;
+}
+#about h4 {
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin:0 0 10px 0;
+  text-align: right;
+}
+#about ul li{
+  padding-bottom: 70px;
+}
+#about ul li P {
+  color: #777;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.75;
+}
+#about .word {
+  width: 34%;
+  height: 41%;
+  float: left;
+  padding: 0 40px 20px 55px;
+}
+#about .picture {
+  float: left;
+  width: 156px;
+  height: 156px;
+  border-radius: 100%;
+  border: 6px solid #f1f1f1;
+}
+#about ul li:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#about .picture img {
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+}
+#about ul li:nth-child(2n) .picture {
+  float: right;
+}
+#about ul li:nth-child(2n) .word {
+  float: right;
+  padding: 0 55px 20px 40px;
+}
+#about ul li:nth-child(2n) .word h4,
+#about ul li:nth-child(2n) .word p{
+  text-align: left;
+}
+#about ul li:last-child .picture {
+  text-align: center;
+  background: #fed136;
+  float: none;
+  margin: 0 auto;
+}
+#about ul li:last-child .picture h4 {
+ text-align: center;
+ padding: 40px 0;
+}
+#about .wrap-main {
+  height: 1446px;
+  position: relative;
+}
+#about .wrap-main ul {
+  position: absolute;
+  z-index: 200;
+}
+#about .wrap-main .main {
+  position: absolute;
+  height: 1350px;
+  border: 1px solid #ccc;
+  left: 50%;
+}
+#team {
+  background: #f7f7f7;
+}
+#team .wrap>ul>li {
+  width: 360px;
+  float: left;
+}
+#team ul li img {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+
+.wrap-icon li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+
+.wrap-icon {
+  text-align: center;
+}
+
+.wrap-icon li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #222;
+}
+#team p {
+  padding-top: 30px;
+}
+
+.wrap-icon li a:before {
+  content: "\e609";
+  color: #fff;
+  line-height: 40px;
+}
+
+.wrap-icon li a:hover {
+  background: #fed136;
+}
+
+#clients {
+ background: #fff;
+ width: 100%;
+}
+#clients .container {
+  width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+}
+#clients .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#clients .container div {
+  float: left;
+  width: 25%;
+  margin: 50px 0;
+}
+
+/*以下还section contact部分样式*/
+#contact {
+  padding: 150px 0;
+  background:#222 url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/map-image.png) no-repeat;
+  color: #fff;
+}
+#contact .wrapper h2 {
+  margin: 0;
+}
+#contact .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+}
+#contact form .wrap:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#contact form .wrap{
+  padding: 0;
+}
+#contact .information {
+  float: left;
+  width: 46%;
+}
+#contact .text {
+  float: right;
+  width: 46%;
+}
+#contact .information input,
+#contact .text textarea {
+  padding: 20px;
+  outline: none;
+  border: 1px solid #fed136;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+#contact .information input {
+  padding-bottom: 21px;
+}
+#contact .send button {
+  padding: 20px 40px;
+  border-radius: 4px;
+  background: #fed136;
+  border: none;
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #fff;
+}
+
+/*以下是footer部分代码*/
+footer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer .container {
+  width: 1140px;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+footer .container p {
+  float: left;
+}
+footer .container ul {
+  float: left;
+}
+footer .container .link {
+  float: right;
+}
+footer .container .link a {
+   color: #fed136;
+   text-decoration: none;
+}
+footer .container .link a:hover {
+   text-decoration: underline;
+}
+footer .container ul {
+  padding: 0 250px;
+}
+
+/* 回到顶部 */
+.goTopBtn {
+      border: 1px solid #fff;
+      background: #fed136;
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+      text-align: center;
+      display: none;
+}
+
+.goTopBtn a {
+      display: block;
+      padding: 10px 30px;
+      text-decoration: none;
+      color: #666;
+}
